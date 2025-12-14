@@ -1,5 +1,8 @@
 # Juego de la Aventura al Cofre
 
+Enlace para jugar:
+https://paulagnzgmz.github.io/Proyecto_Integrador_1-Evaluacion_DWEC_2025_2026/
+
 La idea es que el usuario controle a un héroe en un tablero de 10x10 hasta llegar al cofre del tesoro, usando un dado para ir moviéndose por la cuadrícula.
 
 Me ha servido para practicar JavaScript, manejo del DOM y también algo de `localStorage`.
@@ -82,4 +85,5 @@ En el proyecto he usado estos archivos:
 2. Abrir `index.html` en un navegador.
 3. Escribir un nombre válido, darle a **Introducir nombre** y luego a **Jugar**.
 4. Pulsar **Tirar dado** e ir moviendo al héroe hasta llegar al cofre.
+
 
