@@ -1,0 +1,142 @@
+/* Estilo general de la página: tipografía y fondo tipo jungla/ruinas */
+body {
+    margin: 0;
+    min-height: 100vh;
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    /* Fondo en tonos verdes y marrones, estilo selva */
+    background: radial-gradient(circle at top, #3b5e3b 0%, #1f2f1f 40%, #0b0f0b 100%);
+    color: #f7e5c5;
+    /* CLAVE: poner formulario y tablero en horizontal */
+    display: flex;
+    flex-direction: row;          /* Antes era column */
+    align-items: center;          /* Centrado vertical */
+    justify-content: center;      /* Centrado horizontal */
+    gap: 30px;                    /* Separación entre formulario y tablero */
+    padding: 10px;
+}
+
+/* FORMULARIO DEL JUEGO */
+#idFormulario {
+    background: rgba(0, 0, 0, 0.55);           /* Panel oscuro semi-transparente */
+    border: 2px solid #c49b3f;                 /* Dorado viejo, tipo reliquia */
+    border-radius: 10px;
+    padding: 16px 20px 20px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.7);   /* Sombra para que parezca una caja encima del fondo */
+    max-width: 90%;
+}
+
+/* Label de “Nombre de usuario” */
+#idNombre {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #f7e5c5;
+}
+
+/* Input del nombre */
+#nombre {
+    background: rgba(20, 20, 20, 0.85);
+    border: 1px solid #c49b3f;
+    color: #f7e5c5;
+    padding: 6px 8px;
+    border-radius: 4px;
+    outline: none;
+    width: 200px;
+    margin-bottom: 10px;
+}
+
+#nombre:focus {
+    box-shadow: 0 0 5px #f0d27a;
+}
+
+/* BOTONES GENERALES */
+button {
+    background-color: #7b4a21;          /* Marrón tipo cuero */
+    color: #f7e5c5;
+    border: 1px solid #c49b3f;
+    border-radius: 6px;
+    padding: 6px 12px;
+    margin-right: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    margin-top: 6px;
+    transition: transform 0.1s ease, box-shadow 0.1s ease, background-color 0.1s ease;
+}
+
+button:hover {
+    background-color: #946031;         /* Un poco más claro al pasar el ratón */
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.6);
+    transform: translateY(-1px);
+}
+
+button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    box-shadow: none;
+}
+
+/* Botón “Jugar” un poco más destacado */
+#botonJugar {
+    background-color: #b86b23;
+}
+
+/* Botón de récord con un tono algo más oscuro */
+#botonRecord {
+    background-color: #5a2b24;
+}
+
+/* DADO: al principio oculto (lo manejas con JS) */
+#botonDado {
+    display: none; /* Oculto al inicio */
+    vertical-align: middle;
+}
+
+/* Imagen del dado dentro del botón */
+#botonDado img {
+    width: 40px;
+    height: 40px;
+    display: block;
+}
+
+/* MENSAJES */
+#mensaje {
+    margin-top: 10px;
+    margin-bottom: 5px;
+    font-style: italic;
+    color: #f7e5c5;
+}
+
+#idPTiradas {
+    margin-top: 0;
+    font-weight: bold;
+    color: #f0d27a;
+}
+
+/* TABLERO DEL JUEGO */
+#idTabla {
+    border: 2px solid rgb(140, 82, 6);       /* Marco del tablero tipo marco de reliquia */
+    text-align: center;
+    border-collapse: collapse;
+    background: linear-gradient(135deg, #4a3c1f, #7a5a2a);  /* Fondo de “tierra” */
+    display: none;                            /* Desaparece al iniciar, lo muestras con JS */
+    margin-top: 15px;
+    box-shadow: 0 0 18px rgba(0, 0, 0, 0.8);
+}
+
+/* Celdas del tablero */
+td {
+    border: 1px solid rgb(140, 115, 6);
+    width: 70px;
+    height: 70px;
+    padding: 0;
+}
+
+/* Imágenes dentro de las celdas (suelo, héroe, cofre) */
+td img {
+    width: 100%;
+    height: 100%;
+    display: block; /* Quita hueco blanco abajo */
+}
+
