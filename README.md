@@ -82,3 +82,4 @@ En el proyecto he usado estos archivos:
 2. Abrir `index.html` en un navegador.
 3. Escribir un nombre válido, darle a **Introducir nombre** y luego a **Jugar**.
 4. Pulsar **Tirar dado** e ir moviendo al héroe hasta llegar al cofre.
+
